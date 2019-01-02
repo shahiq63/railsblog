@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+    <h1>This is new page from articles.</h1>
+    <%= form_with scope: :article,  html: {class: 'form-group'}, local: true do |form|%>
+    <p>
+      <%= form.label :title %><br>
+      <%= form.text_field :title , :autocomplete => :off, :class => 'form-control', :placeholder =>"Title" %>
+    </p>
+    <p>
+      <%= form.label :text %><br>
+      <%= form.text_area :text , :class => 'form-control' %>
+    </p>
+    <p>
+      <%= form.submit :class => 'btn btn-primary'  %>
+    </p>
+    <% end %>
+  </div>
+  </div>
+</div>
